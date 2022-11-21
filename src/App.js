@@ -1,14 +1,20 @@
 import './App.css';
-import { Header } from "./components/Header";
-import { NavBar } from "./components/navibar"; 
+import { NavBar } from "./components/NavBar"; 
 
 
-function App() {
+function App({ rollData }) {
+  //const [page, setPage] = useState('')
+  //const [login, setLogin] = useState(null)
+
   return (
-    <div className="App">
-      <Header />
+    <section>
+     <div className="App">
+      <h2>Fresh. Raw. Social Sushi.</h2>
+      </div>
       <NavBar />
-    </div>
+    </section>
+
+    //{page === 'friends' && (<div><Friends /></div>)}
   );
 }
 
