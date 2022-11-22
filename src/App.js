@@ -1,20 +1,21 @@
 import './App.css';
 import { NavBar } from "./components/NavBar"; 
+import { Login } from "./components/login"; 
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom"; 
 
 
 function App({ rollData }) {
-  //const [page, setPage] = useState('')
-  //const [login, setLogin] = useState(null)
+  const [login, setLogin] = useState(null)
 
   return (
-    <section>
-     <div className="App">
-      <h2>Fresh. Raw. Social Sushi.</h2>
-      </div>
-      <NavBar />
-    </section>
+    <section class="container">
 
-    //{page === 'friends' && (<div><Friends /></div>)}
+     <div class="App">
+      <h1>Fresh. Raw. Social Sushi.</h1>
+      </div>
+      <NavBar /> 
+    </section>
   );
 }
 

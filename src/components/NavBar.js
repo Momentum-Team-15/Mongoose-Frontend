@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
-export const NavBar = () => {
+export const NavBar = ({ setLogin }) => { 
     return (
-        <div className="nav-bar">
-            <button className="button">Friendly Sushi</button>
-            <button className="button">All the Sushi</button>
-            <button className="button">Your Sushi</button>
-            <button className="button">Log In</button>
-            <button className="button">Log Out</button>
-        </div>
+        <header> 
+        <h2>Serving Board:</h2>
+        <button> <Link to="/public">All The Sushi</Link> </button> 
+        <button> <Link to="/create">Create</Link> </button> 
+        <button> <Link to="/mycards">My Cards</Link> </button> 
+        <button> <Link to="/Friend">Friendly Sushi</Link> </button>
+        <button> <Link onClick={() => setLogin(null)} to="/">Log Out</Link> </button>
+        </header> 
     )
 }

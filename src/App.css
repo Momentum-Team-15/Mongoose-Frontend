@@ -3,11 +3,15 @@ body {
   height: 100%; 
 }
 
-h2 {
+h1 {
   spacing: center; 
   color: black;
-  margin-left:5em;
+  margin-left:22em;
   margin-right: 5em;
+}
+
+h2 { 
+  color: white;
 }
 
 button {
@@ -20,6 +24,6 @@ button {
 }
 
 button:hover, button:focus {
-  background-color: yellow;
+  background-color: #B9A77E;
 }
 
