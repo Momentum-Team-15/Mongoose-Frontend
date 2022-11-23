@@ -1,24 +1,27 @@
-import { Link } from "react-router-dom";
+import axios from 'axios'
+import { useState } from 'react'
 
 export const Login = ({ setLogin }) => {
-    return (
-        <div>
-            <header className='hero is-small is-info'>
-                <h1 className='hero-body title is-1 has-text-centered'>Social Sushi</h1>
+
+    return(
+        <div> 
+            <header className="head">
+                <h2 className="sushi">Let us roll up some credentials.</h2>
             </header>
-            <div className="login-box box">
+            <div className="login">
                 <div className="field">
-                    <input className="input" type="email" placeholder="Email" />
+                    <input className="input" type="text" placeholder="username" /> 
                 </div>
                 <div className="field">
-                    <input className="input" type="password" placeholder="Password" />
+                    <input className="input" type="password" placeholder="password" />
                 </div>
                 <div className="field">
-                    <p className="control">
-                        <Link className='button has-background-danger-light' onClick={() => setLogin(true)} to="/mycards">Log In</Link>
-                    </p>
+                    <h3 className="click">
+                        <button className="button" onClick={() => (setLogin(true))}>
+                        Log In Here!</button>
+                    </h3>
                 </div>
-            </div>
+            </div>  
         </div>
     )
 }

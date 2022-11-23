@@ -1,0 +1,187 @@
+{"cards": [
+    {   "user": {
+            "id": "1",
+            "author": "Jon"
+            
+    },
+        "style": {
+            "border_width": "5px",
+            "border_style": "solid",
+            "border_color": "red",
+            "background": "lightblue",
+            "font": "Courier",
+            "text_color": ""
+        },
+        "info": {
+            "text": "Hello World"
+    
+        }
+    },
+    {   "user": {
+        "id": "2",
+        "author": "Lucian"
+
+},
+        "style": {
+            "border_width": "3px",
+            "border_style": "dotted",
+            "border_color": "green",
+            "background": "lightgreen",
+            "font": "Courier",
+            "text_color": ""
+        },
+        "info": {
+            "text": "Hello there"
+    
+        }
+
+    },
+    {   "user": {
+        "id": "1",
+        "author": "Jon"
+        
+},
+    "style": {
+        "border_width": "8px",
+        "border_style": "dashed",
+        "border_color": "blue",
+        "background": "pink",
+        "font": "Courier",
+        "text_color": ""
+    },
+    "info": {
+        "text": "Hello World"
+
+    }
+},
+{   "user": {
+    "id": "2",
+    "author": "Lucian"
+
+},
+    "style": {
+        "border_width": "15px",
+        "border_style": "double",
+        "border_color": "yellow",
+        "background": "purple",
+        "font": "Courier",
+        "text_color": "white"
+    },
+    "info": {
+        "text": "Hello there"
+
+    }
+
+},
+{   "user": {
+    "id": "1",
+    "author": "Jon"
+    
+},
+"style": {
+    "border_width": "2px",
+    "border_style": "solid",
+    "border_color": "purple",
+    "background": "lightblue",
+    "font": "Courier",
+    "text_color": "white"
+},
+"info": {
+    "text": "Hello World"
+
+}
+},
+{   "user": {
+"id": "2",
+"author": "Lucian"
+
+},
+"style": {
+    "border_width": "3px",
+    "border_style": "solid",
+    "border_color": "red",
+    "background": "pink",
+    "font": "Courier",
+    "text_color": ""
+},
+"info": {
+    "text": "Hello there"
+}
+
+},
+{   "user": {
+    "id": "1",
+    "author": "Jon"
+    
+},
+"style": {
+    "border_width": "6px",
+    "border_style": "solid",
+    "border_color": "green",
+    "background": "danger",
+    "font": "Courier",
+    "text_color": ""
+},
+"info": {
+    "text": "Hello World"
+
+}
+},
+{   "user": {
+"id": "2",
+"author": "Lucian"
+
+},
+"style": {
+    "border_width": "1px",
+    "border_style": "dashed",
+    "border_color": "orange",
+    "background": "danger-light",
+    "font": "Courier",
+    "text_color": ""
+},
+"info": {
+    "text": "Hello there"
+
+}
+
+},
+{   "user": {
+    "id": "1",
+    "author": "Jon"
+    
+},
+"style": {
+    "border_width": "5px",
+    "border_style": "dotted",
+    "border_color": "blue",
+    "background": "danger",
+    "font": "Courier",
+    "text_color": ""
+},
+"info": {
+    "text": "Hello World"
+
+}
+},
+{   "user": {
+"id": "2",
+"author": "Lucian"
+
+},
+"style": {
+    "border_width": "5px",
+    "border": "solid",
+    "border_color": "red",
+    "background": "danger-light",
+    "font": "Courier",
+    "text_color": ""
+},
+"info": {
+    "text": "Hello there"
+
+}
+
+}
+    
+]}
