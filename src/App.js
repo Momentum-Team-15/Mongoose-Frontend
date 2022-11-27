@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App({cardData }) {
   const [login, setLogin] = useState('')
+  const [username, setUsername] = useState('')
 
   return (
 
