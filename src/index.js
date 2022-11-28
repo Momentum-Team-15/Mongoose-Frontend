@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App rollData={data.cards}
+    <App rollData={data.rolls}
     forceRefresh="True"/> 
     </BrowserRouter>
   </React.StrictMode>

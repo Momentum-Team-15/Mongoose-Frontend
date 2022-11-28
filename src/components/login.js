@@ -10,8 +10,8 @@ export const Login = ({ setAuth }) => {
     const handleSubmit = (event) => {
         event.preventDefault() 
         axios.post('https://mongoosesocial.onrender.com/auth/token/login', {
-            username: admin, 
-            password: 123})
+            username: username, 
+            password: password})
         .then((res) => {
             const token = res.data.auth_token
             setAuth(token, username) 

@@ -4,13 +4,22 @@ import { NavBar } from "./components/NavBar";
 import { Login } from "./components/Login"; 
 import { Friends } from "./components/Friends"; 
 import { MySushi } from "./components/MySushi"; 
-// import { Allsushi } from "./components/Allsushi"; 
+import { MakeRoll } from "./components/MakeRoll"; 
+import { Allsushi } from "./components/Allsushi"; 
 import { Routes, Route } from "react-router-dom"; 
+import useLocalStorageState from 'use-local-storage-state'; 
 
 
-function App({cardData }) {
-  const [login, setLogin] = useState('')
-  const [username, setUsername] = useState('')
+function App({ rollData }) {
+  const [token, setToken] = useLocalStorageState("token", null)
+  const [username, setUsername] = useLocalStorageState("username", '') 
+
+  const setAuth = (token, username) => {
+    setToken(token)
+    setUsername(username) 
+  }
+
+  const isLoggedIn = token 
 
   return (
 
@@ -19,19 +28,21 @@ function App({cardData }) {
       <h2>Fresh. Raw. Social Sushi.</h2>
       </div> 
 
-      {login ? (
+      {isLoggedIn ? (
         <div>
-          <NavBar 
-          setLogin={setLogin} /> 
+          <NavBar token={token} setAuth={setAuth} username={username}/> 
           <Routes>
+            <Route path="/all" element={<Allsushi data={rollData}/>} />
+            <Route path="/Friends" element={<Friends />} /> 
+            <Route path='/MySushi' element={<MySushi />} /> 
+            <Route path="/MakeRoll" element={<MakeRoll />} />
             <Route path="/" element={<Login />} /> 
-            <Route path="/friends" element={<Friends />} /> 
           </Routes>
           </div> 
-      ): ( 
+      ) : ( 
         <div>
           <Login 
-          setLogin={setLogin}/> 
+          setAuth={setAuth}/> 
         </div>)}
 
       </section>
