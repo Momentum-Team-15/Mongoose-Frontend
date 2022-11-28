@@ -35,7 +35,7 @@ function App({ rollData }) {
             <Route path="/all" element={<Allsushi data={rollData}/>} />
             <Route path="/Friends" element={<Friends />} /> 
             <Route path='/MySushi' element={<MySushi />} /> 
-            <Route path="/MakeRoll" element={<MakeRoll />} />
+            <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
             <Route path="/" element={<Login />} /> 
           </Routes>
           </div> 

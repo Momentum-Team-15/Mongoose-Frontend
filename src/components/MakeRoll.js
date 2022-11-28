@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 
-export const MakeRoll = () => {
+export const MakeRoll = ({ username, data }) => {
     const [open, setOpen] = useState(null)
     const [colorOfBackground, setColorOfBackground] = useState('white')
     const [widthOfBorder, setWidthOfBorder] = useState(0)
@@ -13,6 +13,31 @@ export const MakeRoll = () => {
     const [textOfCard, setTextOfCard] = useState('')
     const borderThickness = widthOfBorder + 'px'
     const fontLargeness = sizeOfFont + 'px'
+    let createContainer = {
+        "user": {
+            "id": "1",
+            "author": `${ username }`
+
+        },
+        "style": {
+            "border_width": `${ borderThickness }`,
+            "border_style": `${ styleOfBorder }`,
+            "border_color": `${ colorOfBorder }`,
+            "background": `${ colorOfBackground }`,
+            "font": `${ familyOfFont }`,
+            "text_color": `${ colorOfFont }`,
+            "font_size": `${ fontLargeness }`
+        },
+        "info": {
+            "text": `${ textOfCard }`
+
+        }
+    }
+
+    const handleCreate = () => {
+        data.push(createContainer)
+        console.log(data)
+    }
 
     return (
         <section>
@@ -195,6 +220,7 @@ export const MakeRoll = () => {
 
    
             </div>
+            <button onClick={handleCreate}>Create</button>
 
 
         </section>
