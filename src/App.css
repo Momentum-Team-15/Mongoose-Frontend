@@ -1,3 +1,34 @@
+
+body {
+  background: linear-gradient(#314E3C, #DBE5DF, #45A16B, #DE8650, #45A16B, #DBE5DF, #638771); 
+  height: 100%; 
+}
+
+h1 {
+  spacing: center; 
+  color: black;
+  margin-left:22em;
+  margin-right: 5em;
+}
+
+h2 { 
+  color: red;
+}
+
+button {
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: 20px; 
+  color: black; 
+  cursor: pointer;
+  background-color: white;
+}
+
+button:hover, button:focus {
+  background-color: #B9A77E;
+}
+
+
 * {
   background: lightgreen;
 }
@@ -30,3 +61,4 @@ button:hover,
 button:focus {
   background-color: yellow;
 }
+
