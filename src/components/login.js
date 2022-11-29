@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react'; 
 import { useNavigate }from "react-router-dom"; 
 
-export const Login = ({ setAuth }) => {
+export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate() 
@@ -14,7 +14,7 @@ export const Login = ({ setAuth }) => {
             password: password})
         .then((res) => {
             const token = res.data.auth_token
-            setAuth(token, username) 
+            setLogin(token, username) 
             navigate("/all")
         })
     }
@@ -36,7 +36,7 @@ export const Login = ({ setAuth }) => {
                 </div>
                 <div className="field">
                     <h3 className="click">
-                        <button className="button" onClick={() => (setAuth(true))}>
+                        <button className="button" onClick={() => (setLogin(true))}>
                         Log In Here!</button>
                     </h3>
                 </div>

@@ -14,7 +14,7 @@ function App({ rollData }) {
   const [token, setToken] = useLocalStorageState("token", null)
   const [username, setUsername] = useLocalStorageState("username", '') 
 
-  const setAuth = (token, username) => {
+  const setLogin = (token, username) => {
     setToken(token)
     setUsername(username) 
   }
@@ -23,18 +23,18 @@ function App({ rollData }) {
 
   return (
 
-    <section>
-     <div class="App">
+    <section className= "sushi-app">
+     <div class="App-slug">
       <h2>Fresh. Raw. Social Sushi.</h2>
       </div> 
 
       {isLoggedIn ? (
         <div>
-          <NavBar token={token} setAuth={setAuth} username={username}/> 
+          <NavBar token={token} setLogin={setLogin} username={username}/> 
           <Routes>
             <Route path="/all" element={<Allsushi data={rollData}/>} />
             <Route path="/Friends" element={<Friends />} /> 
-            <Route path='/MySushi' element={<MySushi />} /> 
+            <Route path='/MySushi' element={<MySushi data={rollData}/>} /> 
             <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
             <Route path="/" element={<Login />} /> 
           </Routes>
@@ -42,7 +42,7 @@ function App({ rollData }) {
       ) : ( 
         <div>
           <Login 
-          setAuth={setAuth}/> 
+          setLogin={setLogin}/> 
         </div>)}
 
       </section>

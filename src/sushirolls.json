@@ -31,7 +31,7 @@
             "text_color": ""
         },
         "info": {
-            "text": "Hello there"
+            "text": "this roll is damp."
     
         }
 
@@ -50,7 +50,7 @@
         "text_color": ""
     },
     "info": {
-        "text": "Hello World"
+        "text": "this roll is hard."
 
     }
 },
@@ -68,7 +68,7 @@
         "text_color": "white"
     },
     "info": {
-        "text": "Hello there"
+        "text": "the rolls are abound with sauces."
 
     }
 
@@ -87,7 +87,7 @@
     "text_color": "white"
 },
 "info": {
-    "text": "Hello World"
+    "text": "this roll is dry."
 
 }
 },
@@ -105,7 +105,7 @@
     "text_color": ""
 },
 "info": {
-    "text": "Hello there"
+    "text": "this roll is crusty and stale."
 }
 
 },
@@ -123,7 +123,7 @@
     "text_color": ""
 },
 "info": {
-    "text": "Hello World"
+    "text": "compliments of the chef."
 
 }
 },
@@ -141,7 +141,7 @@
     "text_color": ""
 },
 "info": {
-    "text": "Hello there"
+    "text": "yum yum nom nom munch munch."
 
 }
 
@@ -160,7 +160,7 @@
     "text_color": ""
 },
 "info": {
-    "text": "Hello World"
+    "text": "ooh I has tummyache."
 
 }
 },
@@ -178,7 +178,7 @@
     "text_color": ""
 },
 "info": {
-    "text": "Hello there"
+    "text": "no more social sushis for me."
 
 }
 
