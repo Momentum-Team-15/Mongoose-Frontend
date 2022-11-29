@@ -5,11 +5,11 @@ import { useNavigate }from "react-router-dom";
 export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const navigate = useNavigate() 
+    const navigate = useNavigate('') 
 
     const handleSubmit = (event) => {
         event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/auth/token/login', {
+        axios.post('https://mongoosesocial.onrender.com/auth/token/login/', {
             username: username, 
             password: password})
         .then((res) => {
@@ -35,10 +35,9 @@ export const Login = ({ setLogin }) => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <h3 className="click">
-                        <button className="button" onClick={() => (setLogin(true))}>
-                        Log In Here!</button>
-                    </h3>
+                    <p className="click">
+                        <button className="button" onClick={handleSubmit}>Log In Here!</button>
+                    </p>
                 </div>
             </div>  
         </div>
