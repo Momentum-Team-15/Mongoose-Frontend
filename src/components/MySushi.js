@@ -1,10 +1,21 @@
-import React from 'react'
+import { Roll } from './roll'; 
 
-export const MySushi = () => {
+
+export const MySushi = (props) => {
 
     return (
-        <div>
-            <h2>My Sushi. yumyum.</h2>
-        </div>
+        <section>
+            <h2 className="rotten-sushi">My Sushi. munch munch.</h2>
+            <div className="card-grid">
+                {props.data.map((roll, idx) => (
+                    <div className="roll" key={idx}> 
+                        <Roll roll={roll} /> 
+                        <div className="cardlist">
+                            <p>by {roll.user.author}</p>
+                        </div>
+                    </div> 
+                ))}
+            </div>
+        </section>
     )
-}
+};
