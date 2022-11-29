@@ -1,4 +1,5 @@
 import './App.css';
+
 import React, { useState } from "react"; 
 import { NavBar } from "./components/NavBar"; 
 import { Login } from "./components/Login"; 
@@ -21,7 +22,11 @@ function App({ rollData }) {
 
   const isLoggedIn = token 
 
+import { NavBar } from "./components/NavBar";
+
+
   return (
+
 
     <section>
      <div class="App">
@@ -46,6 +51,15 @@ function App({ rollData }) {
         </div>)}
 
       </section>
+=======
+    <section>
+      <div className="App">
+        <h2>Fresh. Raw. Social Sushi.</h2>
+      </div>
+      <NavBar />
+      
+    </section>
+
   );
 } 
 
