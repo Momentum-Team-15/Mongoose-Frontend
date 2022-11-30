@@ -13,6 +13,7 @@ export const MakeRoll = ({ username, data }) => {
     const [textOfCard, setTextOfCard] = useState('')
     const borderThickness = widthOfBorder + 'px'
     const fontLargeness = sizeOfFont + 'px'
+    
     let createContainer = {
         "user": {
             "id": "1",

@@ -24,7 +24,7 @@ function App({ rollData }) {
   return (
 
     <section className= "sushi-app">
-     <div class="App-slug">
+     <div className="App-slug">
       <h2>Fresh. Raw. Social Sushi.</h2>
       </div> 
 
