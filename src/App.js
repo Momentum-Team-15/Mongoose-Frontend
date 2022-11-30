@@ -25,7 +25,7 @@ function App({ rollData }) {
 
     <section className= "sushi-app">
      <div className="App-slug">
-      <h2>Fresh. Raw. Social Sushi.</h2>
+     <h2>Fresh. Raw. Social Sushi. 🍣</h2>
       </div> 
 
       {isLoggedIn ? (

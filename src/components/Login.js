@@ -16,7 +16,7 @@ export const Login = ({ setLogin }) => {
         .then((res) => {
             const token = res.data.auth_token
             setLogin(token, username) 
-            //navigate("/all") 
+            navigate("/all") 
         })
         .catch((error) => {
             setError(error.message)
@@ -26,10 +26,10 @@ export const Login = ({ setLogin }) => {
     return(
         <div> 
             <header className="head">
-                <h2 className="sushi">Let us roll up some credentials.</h2>
+            <h2 className="sushi">Roll up your credentials: 🍱</h2>
             </header>
 
-            <div className="login">
+            <form className="login">
                 <div className="field">
                     <input className="input" type="text" placeholder="username" 
                     onChange={(e) => setUsername(e.target.value)}/> 
@@ -43,7 +43,7 @@ export const Login = ({ setLogin }) => {
                         <button className="button" onClick={handleSubmit}>Log In Here!</button>
                     </p>
                 </div>
-            </div>  
+            </form>  
         </div>
     )
 }

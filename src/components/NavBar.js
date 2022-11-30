@@ -19,7 +19,7 @@ export const NavBar = ({ setLogin, username, token }) => {
                     <button><Link to="/all">All Sushi</Link></button>
                     <button><Link to="/Friends">Sushi Friends</Link></button> 
                     <button><Link to="/MakeRoll">Build a Roll</Link></button>
-                    <button><Link to="/" onClick={() => setLogin(null)}>Log Out. See you soon!</Link></button> 
+                    <button><Link to="/Login" onClick={() => setLogin(null)}>Log Out. See you soon!</Link></button> 
                 </nav>
         </header >
     )
