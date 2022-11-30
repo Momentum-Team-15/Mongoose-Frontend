@@ -1,21 +1,25 @@
 import axios from 'axios'; 
 import { useState } from 'react'; 
 import { useNavigate }from "react-router-dom"; 
+import { requestLogin } from "./BackdoorHelp"; 
 
 export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const navigate = useNavigate() 
+    const navigate = useNavigate('') 
+    const [error, setError] = useState('null') 
 
     const handleSubmit = (event) => {
         event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/auth/token/login', {
-            username: username, 
-            password: password})
+        setError(null)
+        requestLogin(username, password) 
         .then((res) => {
             const token = res.data.auth_token
             setLogin(token, username) 
-            navigate("/all")
+            //navigate("/all") 
+        })
+        .catch((error) => {
+            setError(error.message)
         })
     }
 
@@ -35,10 +39,9 @@ export const Login = ({ setLogin }) => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className="field">
-                    <h3 className="click">
-                        <button className="button" onClick={() => (setLogin(true))}>
-                        Log In Here!</button>
-                    </h3>
+                    <p className="click">
+                        <button className="button" onClick={handleSubmit}>Log In Here!</button>
+                    </p>
                 </div>
             </div>  
         </div>

@@ -4,9 +4,11 @@ import axios from "axios";
 export const NavBar = ({ setLogin, username, token }) => { 
 
     const handleLogout = () => {
-        setLogin(null, '')
-        axios.post('https://mongoosesocial.onrender.com/auth/token/logout', {},
+        axios
+            .post('https://mongoosesocial.onrender.com/auth/token/logout', 
             { headers: { Authorization: `Token ${token}`, }, })
+            .then(() => setLogin('',null))
+            .catch(() => setLogin('',null)) 
     }
 
     return (
