@@ -11,20 +11,37 @@ h1 {
 }
 
 h2 { 
-  color: red;
+  color: black;
+  padding: 5px;
 }
 
 button {
   margin-left: 3em;
   margin-right: 3em;
+  border-radius: 10%;
   padding: 20px; 
-  color: black; 
+  color: green; 
   cursor: pointer;
-  background-color: white;
+  background-color: lightgreen;
 }
 
 button:hover, button:focus {
   background-color: #B9A77E;
 }
 
+btn-button {
+  margin-left: 4em;
+  margin-right: 4em;
+  border-radius: 12%;
+  padding: 25px; 
+  color: black; 
+  cursor: pointer;
+  background-color: antiquewhite;
+}
 
+.roll-front {
+  width: 500px; 
+  height: 200px;
+  margin: 30px; 
+  border: 3px solid red; 
+}

@@ -25,18 +25,18 @@ function App({ rollData }) {
 
     <section className= "sushi-app">
      <div className="App-slug">
-      <h2>Fresh. Raw. Social Sushi.</h2>
+     <h2>Fresh. Raw. Social Sushi. 🍣</h2>
       </div> 
 
       {isLoggedIn ? (
         <div>
           <NavBar token={token} setLogin={setLogin} username={username}/> 
           <Routes>
-            <Route path="/all" element={<Allsushi data={rollData}/>} />
+            <Route path="/all" element={<Allsushi token={token}/>} />
             <Route path="/Friends" element={<Friends />} /> 
             <Route path='/MySushi' element={<MySushi data={rollData}/>} /> 
             <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
-            <Route path="/" element={<Login />} /> 
+            <Route path="/Login" element={<Login />} /> 
           </Routes>
           </div> 
       ) : ( 

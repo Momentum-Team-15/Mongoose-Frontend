@@ -4,12 +4,11 @@ export const Roll = (props) => {
         <div className="flop-roll">
             <div className="flopping-roll">
                 <div className="roll-front" style={{
-                    borderWidth: props.roll.style.border_width,
-                    borderStyle: props.roll.style.border_style,
-                    borderColor: props.roll.style.border_color,
-                    backgroundColor: props.roll.style.background
+                    backgroundColor: props.roller.color
                 }}>
-                    <p className="title" style={{
+                    <p>{props.roller.title}</p>
+                    <p>{props.roller.card_msg}</p>
+                     {/* <p className="title" style={{
                         color: props.roll.style.text_color
                     }}>Sushi Rolls</p>
                 </div>
@@ -17,8 +16,9 @@ export const Roll = (props) => {
                     backgroundColor: props.roll.style.background,
                     color: props.roll.style.text_color
                 }}>
-                    <p>{props.roll.info.text}</p>
-                </div>
+                    <p>{props.roll.info.text}</p> */}
+                    {console.log(props.roller.color)}
+                </div> 
             </div>
         </div>
     )
