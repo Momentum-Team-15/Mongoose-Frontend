@@ -32,4 +32,3 @@ export const requestFriend = () => {
     const response = axios.post(url) 
         return response 
 }
-

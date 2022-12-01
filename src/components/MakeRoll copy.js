@@ -20,36 +20,36 @@ export const MakeRoll = ({token}) => {
 
     
     let createContainer = {
-        border_width: borderThickness, 
-        border_style: styleOfBorder, 
-        border_color: colorOfBorder,
-        background: colorOfBackground,
-        font: familyOfFont,
-        text_color: colorOfFont,
-        font_size: fontLargeness, 
-        text: textOfCard
+        "user": {
+            "id": "1",
+            "author": `${ username }`
+
+        },
+        "style": {
+            "border_width": `${ borderThickness }`,
+            "border_style": `${ styleOfBorder }`,
+            "border_color": `${ colorOfBorder }`,
+            "background": `${ colorOfBackground }`,
+            "font": `${ familyOfFont }`,
+            "text_color": `${ colorOfFont }`,
+            "font_size": `${ fontLargeness }`
+        },
+        "info": {
+            "text": `${ textOfCard }`
+
+        }
     }
 
     const handleCreate = (event) => {
-        event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/cards',
-            {createContainer},
-        {headers: {
-            Authorization: `Token ${token}`
-        },
-        }
-        
-        
-        )
+        data.push(createContainer)
         .then((res) => {
             setCreated(true) 
-        }, [token])
-        
+        })
     }
 
-    // if (created) {
-    //     return <Navigate to="/Allsushi" /> 
-    // }
+    if (created) {
+        return <Navigate to="/Allsushi" /> 
+    }
 
     return (
         <section>
@@ -237,4 +237,4 @@ export const MakeRoll = ({token}) => {
 
         </section>
     )
-}; 
+}

@@ -9,8 +9,7 @@ export const Allsushi = ({token}) => {
         useEffect(() => {
             requestCards(token)
             .then(res => setRollie(res.data))
-        }
-        )
+        }, [token])
         console.log(rollie) 
 
     return (
