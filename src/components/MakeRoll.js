@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {useState} from 'react'
-
+import { requestMakeRoll } from './BackdoorHelp';
 
 
 export const MakeRoll = ({token}) => {
@@ -31,19 +31,23 @@ export const MakeRoll = ({token}) => {
 
     const handleCreate = (event) => {
         event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/cards/me',
-            {createContainer},
-        {headers: {
-            Authorization: `Token ${token}`
-        },
-        }
-               
-        )
-        .then((res) => {
-            setCreated(true) 
-        }, [token])
         
+        requestMakeRoll(token, createContainer)
+        
+        setColorOfBackground('white')
+        setWidthOfBorder(0)
+        setStyleOfBorder('solid')
+        setColorOfBorder('black')
+        setSizeOfFont(16)
+        setFamilyOfFont('sans-serif')
+        setColorOfFont('black')
+        setTextOfCard('')
+       
     }
+               
+        // .then((res) => {
+        //     setCreated(true) 
+        // }, [token])
 
     // if (created) {
     //     return <Navigate to="/Allsushi" /> 
@@ -221,7 +225,7 @@ export const MakeRoll = ({token}) => {
                 </div>
    
             </div>
-            <button onClick={handleCreate}>Create</button>
+            <button onCreate={handleCreate}>Create</button>
 
         </section>
     )

@@ -57,3 +57,10 @@ export const requestUsersCards = (token) => {
         { headers: { Authorization: `Token ${token}`} })
         return response
 }
+
+export const requestMakeRoll = (token, createContainer) => {
+    const url = 'https://mongoosesocial.onrender.com/users/create'
+
+        axios.post(url, createContainer,
+            { headers: {Authorization: `Token ${token}`}})
+}

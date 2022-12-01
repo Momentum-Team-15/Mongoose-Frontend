@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react"; 
+import React from "react"; 
 import { NavBar } from "./components/NavBar"; 
 import { Login } from "./components/Login"; 
 import { Friends } from "./components/Friends"; 
@@ -25,11 +25,11 @@ function App({ rollData }) {
   return (
 
     <section className= "sushi-app">
-     <div className="App-slug">
-     <h2>Fresh. Raw. Social Sushi. 🍣</h2>
-      </div> 
+     
+      <h2>Fresh. Raw. Social Sushi. 🍣</h2>
 
       {isLoggedIn ? (
+
         <div>
           <NavBar token={token} setLogin={setLogin} username={username}/> 
           <Routes>
@@ -37,18 +37,18 @@ function App({ rollData }) {
             <Route path="/Friends" element={<Friends />} /> 
             <Route path='/MySushi' element={<MySushi data={rollData}/>} /> 
             <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
+            <Route path="/" element={<Login />} /> 
           </Routes>
           </div> 
       ) : ( 
         <div>
           <Routes>
-          <Route path="/Login" element={<Login />} /> 
           <Route path="/" element={<Login setLogin={setLogin} />} />
           <Route path="/register" element={<Register setLogin={setLogin}/>} />
           </Routes>       
         </div>)}
 
-      </section>
+    </section>
   );
 } 
 
