@@ -32,14 +32,13 @@ export const MakeRoll = ({token}) => {
 
     const handleCreate = (event) => {
         event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/cards',
+        axios.post('https://mongoosesocial.onrender.com/cards/',
             {createContainer},
         {headers: {
             Authorization: `Token ${token}`
         },
         }
-        
-        
+               
         )
         .then((res) => {
             setCreated(true) 
@@ -53,7 +52,7 @@ export const MakeRoll = ({token}) => {
 
     return (
         <section>
-            <h1 className="page-title title is-4 has-text-centered">Create a Card</h1>
+            <h1 className="page-title title is-4 has-text-centered">Let's Make a Roll</h1>
             <div className="columns is-flex is-justify-content-space-around">
                 <div className="create-columns column is-3 box has-text-centered">
 
@@ -92,7 +91,6 @@ export const MakeRoll = ({token}) => {
                 </ul>
                 )}
 
-
                 <button className="create-option button" onClick={()=>{ open === 2 ? setOpen(null) : setOpen(2)}}>border width</button>
                 {open === 2 && (
                 <ul className="ulbtn box menu">
@@ -100,7 +98,6 @@ export const MakeRoll = ({token}) => {
                     onChange={e => setWidthOfBorder(e.target.value)}></input>
                 </ul>
                 )}
-
 
                 <br/>
                 <button className="create-option button" onClick={()=>{ open === 3 ? setOpen(null) : setOpen(3)}}>border style</button>
@@ -125,7 +122,6 @@ export const MakeRoll = ({token}) => {
                     </ul>
                 )}
 
-
                 <br/>
                 <button className="create-option button" onClick={()=>{ open === 4 ? setOpen(null) : setOpen(4)}}>border color</button>
                 {open === 4 && (
@@ -149,7 +145,6 @@ export const MakeRoll = ({token}) => {
                     </ul>
                 )}
 
-
                 <br/>
                 <button className="create-option button" onClick={()=>{ open === 5 ? setOpen(null) : setOpen(5)}}>text size</button>
                 {open === 5 && (
@@ -158,7 +153,6 @@ export const MakeRoll = ({token}) => {
                     onChange={e => setSizeOfFont(e.target.value)}></input>
                 </ul>
                 )}
-
 
                 <br/>
                 <button className="create-option button" onClick={()=>{ open === 6 ? setOpen(null) : setOpen(6)}}>text family</button>
@@ -187,7 +181,6 @@ export const MakeRoll = ({token}) => {
                 </ul>
                 )}
 
-
                 <br/>
                 <button className="create-option button" onClick={()=>{ open === 7 ? setOpen(null) : setOpen(7)}}>text color</button>
                 {open === 7 && (
@@ -215,12 +208,10 @@ export const MakeRoll = ({token}) => {
                     </ul>
                 )}
 
-
                 <br/>
                 <input className="text-box" type='text' value={textOfCard} 
                     onChange={e=> setTextOfCard(e.target.value)}></input>
                 </div>
-
 
                 <div className="create-columns box">
                     <div className="created-card" style={{background: colorOfBackground, 
@@ -229,11 +220,9 @@ export const MakeRoll = ({token}) => {
                         padding: '10px'}}>{textOfCard}</p>
                 </div>
                 </div>
-
    
             </div>
             <button onClick={handleCreate}>Create</button>
-
 
         </section>
     )

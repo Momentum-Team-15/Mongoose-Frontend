@@ -7,6 +7,7 @@ import { MySushi } from "./components/MySushi";
 import { MakeRoll } from "./components/MakeRoll"; 
 import { Allsushi } from "./components/Allsushi"; 
 import { Routes, Route } from "react-router-dom"; 
+import { Register } from './components/Register';
 import useLocalStorageState from 'use-local-storage-state'; 
 
 
@@ -41,8 +42,10 @@ function App({ rollData }) {
           </div> 
       ) : ( 
         <div>
-          <Login 
-          setLogin={setLogin}/> 
+          <Routes>
+          <Route path="/" element={<Login setLogin={setLogin} />} />
+          <Route path="/register" element={<Register setLogin={setLogin}/>} />
+          </Routes>       
         </div>)}
 
       </section>
