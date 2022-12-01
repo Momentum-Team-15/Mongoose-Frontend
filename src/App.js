@@ -37,12 +37,12 @@ function App({ rollData }) {
             <Route path="/Friends" element={<Friends />} /> 
             <Route path='/MySushi' element={<MySushi data={rollData}/>} /> 
             <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
-            <Route path="/Login" element={<Login />} /> 
           </Routes>
           </div> 
       ) : ( 
         <div>
           <Routes>
+          <Route path="/Login" element={<Login />} /> 
           <Route path="/" element={<Login setLogin={setLogin} />} />
           <Route path="/register" element={<Register setLogin={setLogin}/>} />
           </Routes>       

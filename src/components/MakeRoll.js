@@ -1,7 +1,6 @@
 import axios from 'axios'
 import {useState} from 'react'
-import { Allsushi } from './Allsushi'; 
-import { Navigate } from 'react-router-dom'; 
+
 
 
 export const MakeRoll = ({token}) => {
@@ -16,7 +15,7 @@ export const MakeRoll = ({token}) => {
     const [textOfCard, setTextOfCard] = useState('')
     const borderThickness = widthOfBorder + 'px'
     const fontLargeness = sizeOfFont + 'px'
-    const [created, setCreated] = useState(false) 
+    
 
     
     let createContainer = {
@@ -32,7 +31,7 @@ export const MakeRoll = ({token}) => {
 
     const handleCreate = (event) => {
         event.preventDefault() 
-        axios.post('https://mongoosesocial.onrender.com/cards/',
+        axios.post('https://mongoosesocial.onrender.com/cards/me',
             {createContainer},
         {headers: {
             Authorization: `Token ${token}`

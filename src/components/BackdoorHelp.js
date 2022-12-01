@@ -51,7 +51,7 @@ export const requestDeleteCard = (token, cardId) => {
 }
 
 export const requestUsersCards = (token) => {
-    const url = 'https://mongoosesocial.onrender.com/cards/user'
+    const url = 'https://mongoosesocial.onrender.com/cards/me'
 
     const response = axios.get(url, 
         { headers: { Authorization: `Token ${token}`} })
