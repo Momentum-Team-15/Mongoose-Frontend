@@ -26,19 +26,20 @@ export const Register = ({ setLogin }) => {
                 <h1 className='hero-body title is-1 has-text-centered'>Social Sushi</h1>
             </header>
 
-            <form className="login-box box">
+            <form className="login-box box" onSubmit={handleSubmit}>
                 <div className="field">
-                    <input className="input" type="text" placeholder="username"
+                    <input className="input" type="text" placeholder="username" minlength="3" required
                         onChange={(e) => setUsername(e.target.value)} />
                 </div>
                 <div className="field">
-                    <input className="input" type="password" placeholder="password"
+                    <input className="input" type="password" placeholder="password" minlength="8" required
+
                         onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className="field is-flex is-justify-content-space-between">
 
                     <button className='button has-background-danger-light' type="submit"
-                        onClick={handleSubmit}>Register</button>
+                        >Register</button>
                 </div>
             </form>
         </div>
