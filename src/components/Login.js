@@ -1,6 +1,6 @@
 import axios from 'axios'; 
 import { useState } from 'react'; 
-import { useNavigate }from "react-router-dom"; 
+import { useNavigate, Link }from "react-router-dom"; 
 import { requestLogin } from "./BackdoorHelp"; 
 
 export const Login = ({ setLogin }) => {
@@ -42,6 +42,7 @@ export const Login = ({ setLogin }) => {
                     <p className="click">
                         <button className="button" onClick={handleSubmit}>Log In Here!</button>
                     </p>
+                    <Link to="/Register">New User? Register Here!</Link>
                 </div>
             </form>  
         </div>

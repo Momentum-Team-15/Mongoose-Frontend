@@ -2,6 +2,7 @@ import { Roll } from './roll';
 import { FollowUser } from './FollowUser';
 import { useState, useEffect } from 'react'; 
 import { requestCards } from './BackdoorHelp'; 
+import { Delete } from './Delete'
 
 
 export const Allsushi = ({token}) => {
@@ -10,20 +11,25 @@ export const Allsushi = ({token}) => {
             requestCards(token)
             .then(res => setRollie(res.data))
         }, [token])
-        console.log(rollie) 
+        /* console.log(rollie) */
 
     return (
-        <div> 
+        <section> 
             <h2>All the sushi. yum yum.</h2> 
-             {rollie.map((roller) =>(
-                <div>
-                    <Roll 
-                    token={token} roller={roller}/>
-                </div>  
-            )  )} 
-        <FollowUser />
-        </div> 
+            <div className='card-grid'>
+                {rollie.map((roller) => (
+                    <div>
+                        <Roll token={token}  roller={roller}/>
+                        <div className='card-list'>
+                            
+                            <div className='flexy'>
+                            {roller === Roll.user && (<Delete token={token} />)}
+                            <FollowUser />
+                            </div>  
+                        </div>
+                    </div>
+                ))} 
+            </div>
+        </section> 
     )
-
-
-}
+};

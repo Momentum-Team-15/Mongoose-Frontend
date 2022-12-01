@@ -33,9 +33,9 @@ function App({ rollData }) {
           <NavBar token={token} setLogin={setLogin} username={username}/> 
           <Routes>
             <Route path="/all" element={<Allsushi token={token}/>} />
-            <Route path="/Friends" element={<Friends />} /> 
-            <Route path='/MySushi' element={<MySushi data={rollData}/>} /> 
-            <Route path="/MakeRoll" element={<MakeRoll username={username} data={rollData}/>} />
+            <Route path="/Friends" element={<Friends token={token}/>} /> 
+            <Route path='/MySushi' element={<MySushi username={username} token={token}/>} /> 
+            <Route path="/MakeRoll" element={<MakeRoll username={username} token={token}/>} />
             <Route path="/Login" element={<Login />} /> 
           </Routes>
           </div> 

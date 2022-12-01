@@ -1,5 +1,14 @@
 import axios from 'axios'; 
 
+export const requestNewUser = (username, password) => {
+    const url = 'https://mongoosesocial.onrender.com/auth/users/'
+
+    const response = axios.post(url, {
+        username: username,
+        password: password})
+        return response
+}
+
 export const requestLogin = (username, password) => {
     const url = 'https://mongoosesocial.onrender.com/auth/token/login/'
 
@@ -26,9 +35,39 @@ export const requestFavorite = () => {
         return response
 }
 
-export const requestFriend = () => {
-    const url = 'https://mongoosesocial.onrender.com/users/friend'
+export const requestFriend = (token) => {
+    const url = 'https://mongoosesocial.onrender.com/users/friend/'
 
-    const response = axios.post(url) 
+    const response = axios.get(url, {
+        headers: { 
+            Authorization: `Token ${token}`} 
+        }) 
         return response 
 }
+
+export const requestAddFriend = (token, friendId) => {
+    const url = 'https://mongoosesocial.onrender.com/users/friend/'
+
+    const response = axios.post(url, {
+        headers: {
+            Authorization: `Token ${token}`}
+    }) 
+        return response 
+}
+
+export const requestDeleteCard = (token, cardId) => {
+    const url = `https://mongoosesocial.onrender.com/cards/${cardId}`
+
+    const response = axios.delete(url,
+        { headers: { Authorization: `Token ${token}`} })
+        return response
+}
+
+export const requestUsersCards = (token) => {
+    const url = 'https://mongoosesocial.onrender.com/cards/user'
+
+    const response = axios.get(url, 
+        { headers: { Authorization: `Token ${token}`} })
+        return response
+}
+

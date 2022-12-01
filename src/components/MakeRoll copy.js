@@ -19,37 +19,38 @@ export const MakeRoll = ({token}) => {
     const [created, setCreated] = useState(false) 
 
     
-    let createContainer = {
-        "user": {
-            "id": "1",
-            "author": `${ username }`
+    // let createContainer = {
+    //     "user": {
+    //         "id": "1",
+    //         "author": `${ username }`
 
-        },
-        "style": {
-            "border_width": `${ borderThickness }`,
-            "border_style": `${ styleOfBorder }`,
-            "border_color": `${ colorOfBorder }`,
-            "background": `${ colorOfBackground }`,
-            "font": `${ familyOfFont }`,
-            "text_color": `${ colorOfFont }`,
-            "font_size": `${ fontLargeness }`
-        },
-        "info": {
-            "text": `${ textOfCard }`
+    //     },
+    //     "style": {
+    //         border_width: borderThickness, 
+    //         "border_width": `${ borderThickness }`,
+    //         "border_style": `${ styleOfBorder }`,
+    //         "border_color": `${ colorOfBorder }`,
+    //         "background": `${ colorOfBackground }`,
+    //         "font": `${ familyOfFont }`,
+    //         "text_color": `${ colorOfFont }`,
+    //         "font_size": `${ fontLargeness }`
+    //     },
+    //     "info": {
+    //         "text": `${ textOfCard }`
 
-        }
-    }
+    //     }
+    // }
 
-    const handleCreate = (event) => {
-        data.push(createContainer)
-        .then((res) => {
-            setCreated(true) 
-        })
-    }
+    // const handleCreate = (event) => {
+    //     data.push(createContainer)
+    //     .then((res) => {
+    //         setCreated(true) 
+    //     })
+    // }
 
-    if (created) {
-        return <Navigate to="/Allsushi" /> 
-    }
+    // if (created) {
+    //     return <Navigate to="/Allsushi" /> 
+    // }
 
     return (
         <section>

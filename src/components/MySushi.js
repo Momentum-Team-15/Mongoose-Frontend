@@ -1,17 +1,26 @@
 import { Roll } from './roll'; 
+import { useEffect, useState } from 'react';
+import { Delete } from './Delete'; 
+import { requestUsersCards } from './BackdoorHelp';
 
+export const MySushi = ({token, username}) => {
+    const [cards, SetCards] = useState([])
 
-export const MySushi = (props) => {
+    useEffect(() => {
+        requestUsersCards(token)
+            .then(res => SetCards(res.data))
+    }, [token])
 
     return (
         <section>
             <h2 className="rotten-sushi">My Sushi. munch munch.</h2>
             <div className="card-grid">
-                {props.data.map((roll, idx) => (
+                {cards.map((roll, idx) => (
                     <div className="roll" key={idx}> 
-                        <Roll roll={roll} /> 
+                        {/* <Roll rollie={rollie} />  */}
+                        <Roll token={token} username={username}/>
                         <div className="cardlist">
-                            <p>by {roll.user.author}</p>
+                            <p>by {roll.user}</p>
                         </div>
                     </div> 
                 ))}
