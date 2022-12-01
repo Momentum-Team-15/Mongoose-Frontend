@@ -38,3 +38,10 @@ btn-button {
   cursor: pointer;
   background-color: antiquewhite;
 }
+
+.roll-front {
+  width: 500px; 
+  height: 200px;
+  margin: 30px; 
+  border: 3px solid red; 
+}
