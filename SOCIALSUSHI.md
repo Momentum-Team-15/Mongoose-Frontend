@@ -10,6 +10,10 @@ The Deployed Website Link: [https://marvelous-profiterole-2bbd98.netlify.app/]
 
 Link to Social Sushi's GitHub Repository: [https://github.com/Momentum-Team-15/mongoose-frontend] 
 
+## Developer Instructions 
+
+Social Sushi is a social media platform where users display message cards. 
+
 
 ## Available Scripts
 

@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import useLocalStorageState from 'use-local-storage-state'; 
 
 
-function App({ rollData }) {
+function App() {
   const [token, setToken] = useLocalStorageState("token", null)
   const [username, setUsername] = useLocalStorageState("username", '') 
 

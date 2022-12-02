@@ -7,19 +7,14 @@ export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate('') 
-    const [error, setError] = useState('null') 
 
     const handleSubmit = (event) => {
         event.preventDefault() 
-        setError(null)
         requestLogin(username, password) 
         .then((res) => {
             const token = res.data.auth_token
             setLogin(token, username) 
             navigate("/all") 
-        })
-        .catch((error) => {
-            setError(error.message)
         })
     }
 
