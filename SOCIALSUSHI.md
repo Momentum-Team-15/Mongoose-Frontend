@@ -1,6 +1,8 @@
-## Social Sushi 
+## Social Sushi
+Welcome to Social Sushi! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Social Sushi was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Netlify Deploy Link 
 
@@ -10,9 +12,18 @@ The Deployed Website Link: [https://marvelous-profiterole-2bbd98.netlify.app/]
 
 Link to Social Sushi's GitHub Repository: [https://github.com/Momentum-Team-15/mongoose-frontend] 
 
+Clone the project from GitHub to your desired local repo. 
+
 ## Developer Instructions 
 
-Social Sushi is a social media platform where users display message cards. 
+Social Sushi is a social media platform where users can display message cards. 
+
+Run [npm install] in the terminal within your local project repo. 
+Use [npm start] in the terminal to run the project on a local server. 
+
+
+This project utilizes the npm software framework. 
+Please see below for additional npm instructions. 
 
 
 ## Available Scripts
