@@ -29,14 +29,14 @@ export const requestCards = (token) => {
 }
 
 export const requestFavorite = () => {
-    const url = 'https://mongoosesocial.onrender.com/cards/favorite'
+    const url = 'https://mongoosesocial.onrender.com/cards/favorite/'
 
     const response = axios.post(url)
         return response
 }
 
 export const requestFriend = () => {
-    const url = 'https://mongoosesocial.onrender.com/users/friend'
+    const url = 'https://mongoosesocial.onrender.com/users/friend/'
 
     const response = axios.post(url) 
         return response 
@@ -51,7 +51,7 @@ export const requestDeleteCard = (token, cardId) => {
 }
 
 export const requestUsersCards = (token) => {
-    const url = 'https://mongoosesocial.onrender.com/cards/me'
+    const url = 'https://mongoosesocial.onrender.com/cards/me/'
 
     const response = axios.get(url, 
         { headers: { Authorization: `Token ${token}`} })
@@ -59,7 +59,7 @@ export const requestUsersCards = (token) => {
 }
 
 export const requestMakeRoll = (token, createContainer) => {
-    const url = 'https://mongoosesocial.onrender.com/users/create'
+    const url = 'https://mongoosesocial.onrender.com/users/create/'
 
         axios.post(url, createContainer,
             { headers: {Authorization: `Token ${token}`}})
