@@ -223,9 +223,9 @@ export const MakeRoll = ({token}) => {
                         padding: '10px'}}>{textOfCard}</p>
                 </div>
                 </div>
+            <button onSubmit={handleCreate}>Create</button>
    
             </div>
-            <button onCreate={handleCreate}>Create</button>
 
         </section>
     )

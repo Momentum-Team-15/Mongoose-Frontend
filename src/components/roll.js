@@ -17,7 +17,7 @@ export const Roll = (props) => {
                     color: props.roll.style.text_color
                 }}>
                     <p>{props.roll.info.text}</p> */}
-                    {console.log(props.roller.color)}
+                  
                 </div> 
             </div>
         </div>
